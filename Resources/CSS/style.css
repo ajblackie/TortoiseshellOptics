@@ -11,6 +11,7 @@ body {
   width: 960px;
   margin: 0px auto;
 }
+
 .banner {
   padding-top: 1rem;
   background-image: url(../Images/glasses-bg.png);
@@ -35,17 +36,16 @@ body {
   height: 1.5rem;
   padding: 0 1rem;
 }
-.header ul {
+.hotdog, .sandwich {
   margin: 0;
   padding: 0;
+}
+.sandwich {
+  display: none;
 }
 .header li {
   display: inline-block;
   padding: 0 1rem;
-}
-/* header for tablets */
-@media only screen and (max-width: 960px) {
-
 }
 .moto {
   float: right;
@@ -58,6 +58,46 @@ body {
   font-size: 2rem;
   line-height: 1.2;
   padding: 1.5rem 5rem;
+}
+/* header for tablets */
+@media only screen and (max-width: 960px) {
+  .banner {
+    height: 22rem;
+    padding-top: 0;
+  }
+  .header .container {
+    width: calc(100% - 2rem);
+  }
+  .moto {
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+    margin-top: 5rem;
+    position: static;
+    margin-right: 2rem;
+  }
+}
+/* header for phones */
+@media only screen and (max-width: 770px) {
+ .hotdog {
+   display: none;
+ }
+ .sandwich {
+   display: block;
+ }
+ .logo span {
+   display: none;
+ }
+ .moto {
+   padding: 0;
+   margin: 0;
+   width: 100%;
+   padding: 1rem auto;
+   margin-top: 9rem;
+   text-align: center;
+ }
+ .moto {
+   padding: 1rem auto;
+ }
 }
 .services .container {
   display: flex;
@@ -84,10 +124,6 @@ body {
 .exams p, .fittings p, .delivery p {
   margin: 0;
 }
-/* content for tablets */
-media only screen and (max-width: 960px) {
-}
-
 .about .container {
   display: flex;
   justify-content: center;
@@ -103,6 +139,38 @@ media only screen and (max-width: 960px) {
   background-color: cadetblue;
   color: white;
 }
+/* content for tablets */
+@media only screen and (max-width: 960px) {
+  .services .container {
+    width: calc(100% - 6rem);
+  }
+  .about .container {
+    width: 100%;
+  }
+}
+/* content for phones */
+@media only screen and (max-width: 770px) {
+  .services .container {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding: 3.77rem;
+  }
+  .about .container {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+  .philosophy, .appointments {
+    padding-bottom: 4rem;
+    width: 100%;
+  }
+  .philosophy span, .appointments span {
+    width: 100%;
+  }
+
+
+}
 footer .container {
   display: flex;
   align-items: center;
@@ -114,6 +182,8 @@ footer img {
   padding-right: 1rem;
 }
 /* footer for tablets */
-media only screen and (max-width: 960px) {
-
+@media only screen and (max-width: 960px) {
+  footer .container {
+    width: calc(100% - 8rem);
+  }
 }
